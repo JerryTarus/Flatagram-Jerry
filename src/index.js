@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {});
 // Post content displayed
 const titleDisplayed = document.querySelector("#card-title");
 const imageDisplayed = document.querySelector("#card-image");
-const likesDidplayed = document.querySelector("#like-count");
+const likesDisplayed = document.querySelector("#like-count");
 
 // Comments content displayed
 const commentsList = document.querySelector("#comments-list");
@@ -21,7 +21,7 @@ fetch("http://localhost:3000/images")
     data.forEach((posts) => {
       imageDisplayed.src = posts.image;
       titleDisplayed.innerHTML = posts.title;
-      likesDidplayed.innerHTML = `${posts.likes} likes`;
+      likesDisplayed.innerHTML = `${posts.likes} likes`;
     })
   );
 
